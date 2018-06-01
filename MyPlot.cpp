@@ -61,7 +61,7 @@ void MyPlot::listcreafile(QString str){
     		xp.push_back(xaux);
     		in>>yaux;
     		yp.push_back(yaux);
-    		out << xp[i]<<'\t'<<yp[i]<< endl;
+    		//out << xp[i]<<'\t'<<yp[i]<< endl;
     		i++;
 
   		}
