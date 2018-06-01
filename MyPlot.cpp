@@ -41,13 +41,13 @@ void MyPlot::listcrea(int npoint=100){
 		
 }
 
-void MyPlot::listcreafile(){
+void MyPlot::listcreafile(QString str){
 	
 	
 	//QString * fileName =new QString;
 	//*fileName=txte02->displayText();
 	QTextStream out(stdout);
-	QFile file("ciao.txt");
+	QFile file(str);
 	file.open(QIODevice::ReadOnly);
 	QTextStream in(&file);
 	out<<"File read\n";

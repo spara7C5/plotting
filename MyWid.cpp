@@ -153,10 +153,10 @@ void MyWid::update(){
 		
 int MyWid::updatefile(){
 	
-	//QString * fileName =new QString;
-	//*fileName=txte02->displayText();
+	QString fileName;
+	fileName=txte02->displayText();
 	QTextStream out(stdout);
-	QFile file("miofile.txt");
+	QFile file(fileName);
 	QTextStream in(&file);
 	int chk=file.open(QIODevice::ReadOnly);
 	
@@ -166,10 +166,11 @@ int MyWid::updatefile(){
   		return 1;
 		} 
 		else {	std::cout<<"ho aperto";
-		plot1->listcreafile();
+		plot1->listcreafile(fileName);
 	   			file.close(); 
+	   			//return "oook";
 	   			}
-
+	
 
 }
 		

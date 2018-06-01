@@ -29,7 +29,7 @@ class MyPlot : public QwtPlot {
         
         MyPlot();
 		~MyPlot();
-		void listcreafile();
+		void listcreafile(QString str);
 	public slots:
 		
 		void listcrea(int npoint);
