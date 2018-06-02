@@ -6,7 +6,7 @@ The following list describes the setup on which this project has been compiled a
 4) package qwt-6.1.3 (installation instructions at http://qwt.sourceforge.net/qwtinstall.html)
 
 # Makefile creation
-(a common procedure for a qt project)
+(a common procedure for a qt project)  <br />
 -Create a directory and clone the repo <br />
 -positioned in the directory, launch "qmake -project" <br />
 -edit the generated foo.pro file adding the lines for INCLUDEPATH,LIBS,QT. See "project-ex" as example <br />
