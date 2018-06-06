@@ -74,3 +74,10 @@ void MyPlot::listcreafile(QString str){
 	file.close();
 
 }
+
+void MyPlot::setlist(){
+	
+	
+}
+
+
