@@ -1,18 +1,12 @@
-#include<MyPlot.h>
+#ifndef MYWID_H
+#define MYWID_H
 
+#include<MyPlot.h>
 #include <qwidget.h>
 #include <qapplication.h>
 #include <QLineEdit>
 #include <QString>
 #include <QComboBox>
-
-
-
-
-#ifndef MYWID_H
-#define MYWID_H
-
-
 
 class MyWid : public QWidget{
 	
@@ -40,4 +34,4 @@ class MyWid : public QWidget{
 };
 
 
-#endif MYWID_H
+#endif // MYWID_H

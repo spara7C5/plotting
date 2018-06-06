@@ -151,8 +151,11 @@ void MyWid::update(){
 				
 		}
 		
+/* Check if the file exist and launch the func that will create the
+ * point array 
+ */
 int MyWid::updatefile(){
-	
+	int outVal = 0;
 	QString fileName;
 	fileName=txte02->displayText();
 	QTextStream out(stdout);
@@ -162,21 +165,18 @@ int MyWid::updatefile(){
 	
 	if (!chk) {
     
-  		std::cout<<"File does not exist";
-  		return 1;
-		} 
-		else {	std::cout<<"ho aperto";
+  		out<<"File does not exist";
+  		outVal = 1;
+	} 
+	else {
+		out<<"ho aperto" << endl;
+		file.close(); 
 		plot1->listcreafile(fileName);
-	   			file.close(); 
-	   			//return "oook";
-	   			}
-	
-
+	}
+	return outVal;
 }
 		
 void MyWid::toprint(){
-	
-	
 	QString * strName =new QString;
 	QString *strExt = new QString;
 	*strExt=combo2->currentText();
