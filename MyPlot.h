@@ -41,4 +41,4 @@ class MyPlot : public QwtPlot {
 
 
 
-#endif MYPLOT_H
+#endif // MYPLOT_H

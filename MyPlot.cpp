@@ -41,7 +41,7 @@ void MyPlot::listcrea(int npoint=100){
 		
 }
 
-void MyPlot::listcreafile(QString str){
+ void MyPlot::listcreafile(QString str){
 	
 	
 	//QString * fileName =new QString;
@@ -52,27 +52,24 @@ void MyPlot::listcreafile(QString str){
 	QTextStream in(&file);
 	out<<"File read\n";
 
-	double xaux;
-	double yaux;
+	double xaux, yaux;
+	int i=0;
 	
-     int i=0;
-      while (!((in>>xaux).atEnd())) {
-      	  	//in>>xaux;
-    		xp.push_back(xaux);
-    		in>>yaux;
-    		yp.push_back(yaux);
-    		//out << xp[i]<<'\t'<<yp[i]<< endl;
-    		i++;
-
-  		}
-  		    		curve1->setSamples(xp,yp);
-			xp.clear();
-			yp.clear();
-			curve1->attach(this);
-			this->replot();
-			this->show();
+     while (!((in>>xaux).atEnd())) {
+		
+		xp.push_back(xaux);
+		in>>yaux;
+		yp.push_back(yaux);
+		out << xp[i]<<'\t'<<yp[i]<< endl;
+		i++;
+	}
 	file.close();
-
+	curve1->setSamples(xp,yp);
+	xp.clear();
+	yp.clear();
+	curve1->attach(this);
+	this->replot();
+	this->show();
 }
 
 void MyPlot::setlist(){
