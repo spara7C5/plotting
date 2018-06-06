@@ -17,7 +17,7 @@ The following list describes the setup on which this project has been compiled a
 * make
 
 ## TODO
-[] Documentation
-[] Improve plot view (axis name, zoom, colors, line thickness)
-[] implement linear FIT or other interpolation methods
+- [ ] Documentation
+- [ ] Improve plot view (axis name, zoom, colors, line thickness)
+- [ ] implement linear FIT or other interpolation methods
 
