@@ -30,6 +30,7 @@ class MyPlot : public QwtPlot {
         MyPlot();
 		~MyPlot();
 		void listcreafile(QString str);
+		void setlist();
 	public slots:
 		
 		void listcrea(int npoint);
