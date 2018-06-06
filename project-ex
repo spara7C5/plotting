@@ -5,10 +5,6 @@
 TEMPLATE = app
 TARGET = plots
 
-INCLUDEPATH += /usr/local/qwt-6.1.3/include
-
-LIBS += -L /usr/local/qwt-6.1.3/lib/ -lqwt
-
 
 # The following define makes your compiler warn you if you use any
 # feature of Qt which has been marked as deprecated (the exact warnings
@@ -28,4 +24,4 @@ SOURCES += main.cpp MyPlot.cpp MyWid.cpp
 
 QT += widgets
 QT += gui
-
+CONFIG += qwt
