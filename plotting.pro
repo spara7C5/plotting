@@ -4,7 +4,11 @@
 
 TEMPLATE = app
 TARGET = plotting
+
 INCLUDEPATH += include
+OBJECTS_DIR=obj
+DESTDIR=bin
+MOC_DIR=moc
 
 # The following define makes your compiler warn you if you use any
 # feature of Qt which has been marked as deprecated (the exact warnings
