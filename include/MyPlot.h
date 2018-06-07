@@ -22,6 +22,7 @@ class MyPlot : public QwtPlot {
 	
 	
 	public:
+		
 		QwtPlotCurve* curve1;
 		QwtPlotRenderer *printer;
 		QVector <double> xp;
@@ -30,7 +31,7 @@ class MyPlot : public QwtPlot {
         MyPlot();
 		~MyPlot();
 		void listcreafile(QString str);
-		void setlist();
+		void setlist(MyPlot* pplot, QwtPlotCurve* pcurve, QVector <double>& px, QVector <double>& py);
 	public slots:
 		
 		void listcrea(int npoint);

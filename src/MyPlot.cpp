@@ -31,12 +31,8 @@ void MyPlot::listcrea(int npoint=100){
 		
 		  yp.push_back(5.0*sin( xp[i]));
 		}
-		curve1->setSamples(xp,yp);
-		xp.clear();
-	    yp.clear();
-		curve1->attach(this);
-		this->replot();
-		this->show();
+		
+		setlist(this,curve1,xp,yp);
 		
 		
 }
@@ -63,18 +59,18 @@ void MyPlot::listcrea(int npoint=100){
 		out << xp[i]<<'\t'<<yp[i]<< endl;
 		i++;
 	}
-	file.close();
-	curve1->setSamples(xp,yp);
-	xp.clear();
-	yp.clear();
-	curve1->attach(this);
-	this->replot();
-	this->show();
+	
+	setlist(this,curve1,xp,yp);
 }
 
-void MyPlot::setlist(){
-	
-	
+void MyPlot::setlist(MyPlot* pplot, QwtPlotCurve* pcurve, QVector <double> & px, QVector <double> & py){
+	pcurve->setSamples(px,py);
+	px.clear();
+	py.clear();
+	pcurve->attach(pplot);
+	pplot->replot();
+	pplot->show();
+		
 }
 
 
